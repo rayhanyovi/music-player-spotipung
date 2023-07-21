@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <title>Music Player by Rayhan Yovi</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="sidebar-button-container">
+        <a href="" class="sidebar-button">
+          <span class="material-symbols-outlined"> home </span>
+          <h3>Home</h3>
+        </a>
+        <a href="" class="sidebar-button">
+          <span class="material-symbols-outlined"> search </span>
+          <h3>Search</h3>
+        </a>
+      </div>
+
+      <div class="playlist-list-container">
+        <h3 style="color: lightgray; margin: 10px 0; padding-left: 5px">
+          Your Playlist
+        </h3>
+
+        <a href="" class="playlist-list">
+          <img
+            src="https://i1.sndcdn.com/artworks-y6qitUuZoS6y8LQo-5s2pPA-t500x500.jpg"
+            alt="" />
+          <div class="playlist-list-content">
+            <h5>Playlist Name</h5>
+            <p>Description</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="playlist">
+      <div class="playlist-header">
+        <img src="" alt="" />
+        <div class="playlist-head-content">
+          <img
+            src="https://cdn1-production-images-kly.akamaized.net/wizlXmBAHhmiy_OONOjOEExmiEU=/500x500/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4473096/original/079167400_1687227614-6682d4172ec12c5a0e8ad5271c3495ee.jpg"
+            alt=""
+            style="height: 200px" />
+          <div class="playlist-header-description">
+            <h4>Playlist</h4>
+            <h1>Judul Playlist</h1>
+            <p>description</p>
+            <p><b>xx songs</b> 2hr, 58 min</p>
+          </div>
+        </div>
+      </div>
+      <div class="menu">
+        <div class="menu-left">
+          <button id="play">
+            <span
+              class="material-symbols-outlined"
+              style="font-size: 40px; float: right">
+              play_arrow
+            </span>
+          </button>
+          <button id="enchance">Enchance</button>
+          <button id="enchance">Add New Song</button>
+          <a href=""
+            ><span class="material-symbols-outlined" style="margin-top: 2px">
+              more_horiz
+            </span></a
+          >
+        </div>
+        <div class="menu-right">
+          <a href="">search</a>
+          <p>Custom Order</p>
+        </div>
+      </div>
+      <div class="songs">
+        <table>
+          <thead>
+            <th>#</th>
+            <th>Title</th>
+            <th>Artist(s)</th>
+            <th>Date Added</th>
+            <th>Duration</th>
+            <th>Times Played</th>
+          </thead>
+          <tbody>
+            <% songs.forEach(function(song) { %>
+            <tr>
+              <td>1</td>
+              <td>
+                <div>
+                  <img
+                    src="images/<%=song.title%>.jpg"
+                    alt=""
+                    style="display: block; margin: 0 auto" />
+                  <span style="display: block"><%= song.title %></span>
+                </div>
+              </td>
+              <td><%= song.artists.join(', ') %></td>
+              <td>2020-01-01</td>
+              <td>00:00:00</td>
+              <td>0</td>
+            </tr>
+            <% }); %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
